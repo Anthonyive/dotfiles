@@ -1,0 +1,14 @@
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[user]
+	name = Anthonyive
+	email = anthonyzhang0812@gmail.com
+[color]
+	ui = true
+[core]
+	excludesfile = /Users/anthony/.gitignore_global
+[init]
+	defaultBranch = main
