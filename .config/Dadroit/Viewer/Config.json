@@ -1,0 +1,29 @@
+{
+	"Version": "1.1.0.1648",
+	"ID": "ebdb8f58d2d31c4cd3ce4bbebd2920a3696b73811e69a77ba93fe03336385ee9",
+	"Window": {
+		"Left": 0,
+		"Top": 0,
+		"Width": 600,
+		"Height": 800,
+		"WindowState": "wsNormal" // "wsNormal","wsMinimized","wsMaximized","wsFullScreen"
+	},
+	"View": {
+		"StatusBar": true,
+		"NodePathStatusBar": true
+	},
+	"Style": {
+		"ContentOdd": 16448250,
+		"ContentEven": 536870911
+	},
+	"AutoRefresh": {
+		"Active": true,
+		"Silent": true,
+		"Instant": false
+	},
+	"Recent": {
+		"List": [],
+		"Limit": 10
+	},
+	"Logging": 1
+}
