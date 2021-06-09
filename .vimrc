@@ -36,7 +36,8 @@ Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 "This unsets the "last search pattern" register by hitting return
-nnoremap <CR> :noh<CR><CR>
+" nnoremap <CR> :noh<CR><CR>
+set nohlsearch
 
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |

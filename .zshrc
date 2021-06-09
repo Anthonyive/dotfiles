@@ -139,6 +139,8 @@ export PYTHONPATH=$SPARK_HOME/python/lib/$py4jzip:$PYTHONPATH
 export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
 export JAVA_HOME=$(/usr/libexec/java_home -v1.8)
 ## export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_282`
+# brew sbin path
+export PATH="/usr/local/sbin:$PATH"
 # PYSPARK CONFIGS
 export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS='lab'
