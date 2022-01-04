@@ -1,0 +1,31 @@
+{
+    "InternalPDFViewer": {
+        "Embedded": true,
+        "File": "../../Documents/GitHub.nosync/resume/resume.pdf"
+    },
+    "Session": {
+        "Bookmarks": [
+        ],
+        "CurrentFile": "../../Documents/GitHub.nosync/resume/resume.tex",
+        "FileVersion": 1,
+        "Files": [
+            {
+                "Col": 62,
+                "EditorGroup": 0,
+                "FileName": "../../Documents/GitHub.nosync/resume/resume.tex",
+                "FirstLine": 4,
+                "FoldedLines": "",
+                "Line": 27
+            },
+            {
+                "Col": 2,
+                "EditorGroup": 0,
+                "FileName": "../../Documents/GitHub.nosync/resume/preamble.sty",
+                "FirstLine": 21,
+                "FoldedLines": "",
+                "Line": 53
+            }
+        ],
+        "MasterFile": ""
+    }
+}
