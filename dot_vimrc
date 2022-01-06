@@ -173,7 +173,7 @@ set spell
 set autoindent
 
 " Convert tabs to spaces.
-set expandtab
+" set expandtab
 
 " Enable indentation rules that are file-type specific. set filetype indent on
 

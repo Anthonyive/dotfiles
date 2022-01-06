@@ -8,3 +8,7 @@
 	email = anthony.yuchen@gmail.com
 [credential]
 	helper = cache
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
