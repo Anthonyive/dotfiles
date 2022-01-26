@@ -1,32 +1,8 @@
 " Comments in Vimscript start with a `"`.
 
-" Specify a directory for plugins
-call plug#begin('~/.vim/plugged')
-
-" color theme
-Plug 'morhetz/gruvbox' 
-" status bar theme
-Plug 'vim-airline/vim-airline'
-" comments
-Plug 'tpope/vim-commentary'
-" vim git wrapper
-Plug 'tpope/vim-fugitive'
-" vim auto-pair brackets
-Plug 'jiangmiao/auto-pairs'
-" surround quotes/brackets/... 
-" useful shortcuts: ysiw": 'yank surround inside word', 
-" add double quotes to a word
-Plug 'tpope/vim-surround'
-" nnn file explorer
-Plug 'mcchrish/nnn.vim'
-" nerdtree
-Plug 'preservim/nerdtree'
-"nerdtree icons
-Plug 'ryanoasis/vim-devicons'
-" neovim lsp (require neovim 5.0) Plug 'neovim/nvim-lspconfig' chezmoi syntax
-" highlighting Note: must be at the end of plugins Plug 'alker0/chezmoi.vm'
-
-call plug#end()
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
 
 " To have the zsh syntax automatically set whenever you open a file with the
 " .aliases extension (most likely for zsh aliases)
@@ -36,35 +12,8 @@ autocmd BufNewFile,BufRead *.aliases set syntax=zsh
 " <CR> :noh<CR><CR>
 set nohlsearch
 
-" Exit Vim if NERDTree is the only window left.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-
-" disable deleting brackets, quotes in pair
-let g:AutoPairsMapBS = 1
-
 " set encodings
 set encoding=UTF-8
-
-" nerdtree keymappings
-nnoremap <leader>n :NERDTreeFocus<CR> 
-nnoremap <C-n> :NERDTree<CR> 
-nnoremap <C-t> :NERDTreeToggle<CR> 
-nnoremap <C-f> :NERDTreeFind<CR>
-
-" coc config 
-" let g:coc_global_extensions = ['coc-pairs', 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-json', 'coc-pyright', 'coc-sh']
-
-" nnn Floating window (neovim latest and vim with patch 8.2.191)
-let g:nnn#layout = { 'window': { 'width': 0.9, 'height': 0.6, 'highlight': 'Debug' } }
-
-" vim-airline show git branch let g:airline#extensions#branch#enabled=1
-
-" Automatically displays all buffers when there's only one tab open. let
-" g:airline#extensions#tabline#enabled = 1
-
-" Set the keybinding for starting omnicompletion to <C-N> instead of
-" <Ctrl-Space>
-" let g:jedi#completions_command = "<C-N>"
 
 " Vim can be configured for each file type independently. For example, Vim can
 " be configured to use four spaces for a tab when it opens a Python file but
@@ -73,8 +22,6 @@ let g:nnn#layout = { 'window': { 'width': 0.9, 'height': 0.6, 'highlight': 'Debu
 " https://towardsdatascience.com/getting-started-with-vim-and-tmux-for-python-707ec5ff747f
 filetype plugin indent on
 
-" Set color scheme
-colorscheme gruvbox 
 set termguicolors
 
 " If you open this file in Vim, it'll be syntax highlighted for you.
