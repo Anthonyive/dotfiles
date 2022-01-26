@@ -19,8 +19,21 @@
 #   dotfiles "$@"
 # }
 
-# Shortcuts
+# Re-source
 alias reload="source ~/.zshrc"
+
+# List all Java Virtual Machines
+alias lsjvm="/usr/libexec/java_home -V"
+
+# List Applications that run on intel architectures
+alias lsintel="system_profiler SPApplicationsDataType -json | jq '.[][] | select(.arch_kind == \"arch_i64\") | ._name' | sort"
+
+# Show battery health
+# alias battery_health="system_profiler SPPowerDataType -json | jq '.[] | .[0] | .sppower_battery_health_info'"
+alias battery_health="system_profiler SPPowerDataType -json | jq '.[] | .[0] | .sppower_battery_health_info | .[\"Cycle Count\"] = .sppower_battery_cycle_count | .[\"Condition\"] = .sppower_battery_health | .[\"Maximum Capacity\"] = .sppower_battery_health_maximum_capacity | del(.sppower_battery_cycle_count, .sppower_battery_health, .sppower_battery_health_maximum_capacity)' | jq -r 'keys[] as \$k | \"\\(\$k): \\(.[\$k]) \"'"
+
+# List all installed Java JDKs
+alias java_homes="/usr/libexec/java_home -V"
 
 # Overwrite `ls` command wth `lsd`
 # alias ls='lsd'
